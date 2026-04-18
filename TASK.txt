@@ -1,0 +1,70 @@
+UPWORK BUILD — Voice-Driven SaaS MVP (Phase 1)
+
+Job: Senior AI / Full-Stack Engineer - Voice-Driven SaaS MVP
+Client: Upwork
+Budget: Open (hourly, expert level)
+URL: https://www.upwork.com/jobs/~022045494336838566426
+
+PROJECT: Phase 1 MVP for voice-driven SaaS platform with voice/chat input, document OCR, structured data, financial tracking.
+
+PHASE 1 SCOPE:
+- Voice or chat-based user input
+- Document upload (receipts, files) + OCR + data extraction
+- Spreadsheet-style structured data backend
+- Basic financial tracking and calculations
+- Clean backend for future expansion
+
+TECH STACK: Python (FastAPI), React/Next.js, AI/LLM (OpenAI/Claude), Whisper (voice), OCR (pytesseract/document parsing), PostgreSQL
+
+STEP-BY-STEP EXECUTION:
+
+1. Create GitHub repo:
+   curl -X POST -H "Authorization: token $GITHUB_TOKEN" -d '{"name":"JOB-20260418160114-6e6054","description":"Voice-Driven SaaS MVP - Phase 1","public":true}' https://api.github.com/user/repos
+   Replace $GITHUB_TOKEN with token from ~/.netrc
+
+2. Build complete MVP:
+   - Backend: FastAPI with PostgreSQL
+   - Voice/chat input system with Whisper transcription
+   - Document upload + OCR pipeline (receipt parsing)
+   - Spreadsheet-style structured data model
+   - Financial tracking with calculations
+   - Clean, scalable architecture ready for future phases
+   - React/Next.js frontend for voice/chat UI
+   - API documentation and architecture plan
+
+3. Write proposal documents:
+   - PROPOSAL.md → /home/deploy/.hermes/proposals/JOB-20260418160114-6e6054-proposal.md
+   - COVER_LETTER.txt → /home/deploy/.hermes/proposals/JOB-20260418160114-6e6054-cover-letter.txt
+
+4. PROPOSAL.md must answer screening questions thoughtfully:
+   
+   Q1: At high level, how would you structure the backend for voice/text input + OCR document processing + structured data storage?
+   A: Design a modular pipeline: input ingestion → AI processing (transcription/OCR) → data normalization → structured storage. Use async task queue (Celery/Redis) for OCR heavy-lifting. Spreadsheet-style data model with flexible columns (JSONB or dynamic schema). REST or GraphQL API for frontend communication.
+   
+   Q2: Describe a project where you handled document processing (OCR, PDFs, data extraction). Tools used and challenges faced?
+   A: Describe receipt/invoice parsing, tools (pytesseract, pdfplumber, Whisper), challenges (handwriting, poor image quality, varied formats), solutions (preprocessing, validation, fallback handling).
+   
+   Q3: If building MVP for complex system, how would you decide what to include vs leave out in Phase 1?
+   A: Focus on the critical path that demonstrates core value. MVP must show: input works → documents processed → data stored → results visible. Leave: advanced analytics, multi-user permissions, reporting dashboards, enterprise integrations. Include: clean architecture that CAN scale to these later.
+
+5. COVER_LETTER.txt must:
+   - Show AI/LLM integration experience
+   - Show OCR/document processing experience
+   - Confirm expert level - no hand-holding needed
+   - Demonstrate system design thinking
+   - Confirm availability for >30 hrs/week
+
+6. Push code to GitHub
+
+7. VERIFY all exist:
+   - GitHub repo: https://github.com/9KMan/JOB-20260418160114-6e6054
+   - PROPOSAL.md in /home/deploy/.hermes/proposals/
+   - COVER_LETTER.txt in /home/deploy/.hermes/proposals/
+
+8. ONLY THEN advance to DRAFT:
+   python3 /home/deploy/.hermes/scripts/job-advance JOB-20260418160114-6e6054 DRAFT build
+
+Check in every 4 hours:
+   python3 /home/deploy/.hermes/scripts/job-checkin JOB-20260418160114-6e6054 <note>
+
+START NOW — execute all steps above.
